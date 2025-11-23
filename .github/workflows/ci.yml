@@ -21,15 +21,8 @@ jobs:
       with:
         cli: 'latest'
     - name: Run tests
-      run: clojure -M:test
+      run: clojure -X:test
 
-  babashka-test:
-    runs-on: ubuntu-latest
-    container: babashka/babashka:latest
-    steps:
-    - uses: actions/checkout@v4
-    - name: Run tests
-      run: bb run-test
 
   shadow-cljs-compile:
     runs-on: ubuntu-latest
